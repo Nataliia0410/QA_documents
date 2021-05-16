@@ -1,0 +1,351 @@
+==================BUGS======================================================
+============================================================================
+Bug ID: 1.1
+Summary: Required fields are not marked for the ITCareerToday web form
+Severity: Minor
+Priority:
+Status: Open
+Pre-conditions:1. Open http://itcareer.pythonanywhere.com/
+Steps:         1. Look at the form with fields
+Actual result: Required fields are not marked
+Expected result: Required fields are marked
+Attachments: https://i.imgur.com/AxW11Bf.png
+============================================================================
+Bug ID: 1.2
+Summary:The validation message is not displayed in the name field if the field is empty
+Severity: Minor
+Priority:
+Status: Open
+Pre-conditions:1. Open http://itcareer.pythonanywhere.com/
+Steps:         1. Leave the Name field
+               2. Enter the Surname: Tester
+               3. Enter the Email: Tester@gmail.com
+               4. Enter the Password: Tester123
+               5. Click button Submit
+Actual result: The name field is not displayed the validation message
+Expected result: The name field displayed the validation message: "This field is required"
+Attachments: https://i.imgur.com/8Z0tEjG.png
+============================================================================
+Bug ID: 1.3
+Summary:The name field don't accept the valid accept maximum 256 characters.
+Severity: Minor
+Priority:
+Status: Open
+Pre-conditions:1. Open http://itcareer.pythonanywhere.com/
+Steps:         1. Enter the Name: NataliiaNataliiaNataliiaNataliiaNata
+               liiaNataliiaNataliiaNataliiaNataliiaNataliiaNataliiaNat
+               aliiaNataliiaNataliiaNataliiaNataliiaNataliiaNataliiaNa
+               taliiaNataliiaNataliiaNataliiaNataliiaNataliiaNataliiaN
+               ataliiaNataliiaNataliiaNataliiaNataliiaNataliialiiaNata
+               liiaaliia
+               2. Enter the Surname: Tester
+               3. Enter the Email: Tester@gmail.com
+               4. Enter the Password: Tester12
+               5. Click button Submit
+Actual result: The name field don't accept the valid accept maximum 256 characters.
+Expected result: The name field accept the valid accept maximum 256 characters.
+Attachments: https://i.imgur.com/fYFaV8Y.png
+             https://i.imgur.com/3LRVoXm.png
+========================================================================
+Bug ID: 1.4
+Summary:The name field don't accept the valid accept minimum 2 characters.
+Severity: Minor
+Priority:
+Status: Open
+Pre-conditions:1. Open http://itcareer.pythonanywhere.com/
+Steps:         1. Enter the Name: Na
+               2. Enter the Surname: Tester
+               3. Enter the Email: Tester@gmail.com
+               4. Enter the Password: Tester1234
+               5. Click button Submit
+Actual result: The name field don't accept the valid accept minimum 2 characters.
+Expected result: The name field accept the valid accept minimum 2 characters.
+Attachments: https://i.imgur.com/2KQWV1E.png
+             https://i.imgur.com/3LRVoXm.png
+========================================================================
+Bug ID: 1.5
+Summary: The Name field, takes the name at the beginning of which there is a digits
+Severity: Minor
+Priority:
+Status: Open
+Pre-conditions:1. Open http://itcareer.pythonanywhere.com/
+Steps:         1. Enter the Name: 1Nataliia
+               2. Enter the Surname: Tester
+               3. Enter the Email: Tester@gmail.com
+               4. Enter the Password: Tester1234
+               5. Click button Submit
+Actual result: The Name field, takes a name at the beginning of which there is a digits
+Expected result: The name field displays a validation message.
+Attachments: https://i.imgur.com/LEACs7e.png
+             https://i.imgur.com/3LRVoXm.png
+=========================================================================
+Bug ID: 1.6
+Summary: The Name field, takes the name with a period at the beginning and at the end.
+Severity: Minor
+Priority:
+Status: Open
+Pre-conditions:1. Open http://itcareer.pythonanywhere.com/
+Steps:         1. Enter the Name: .Nataliia.
+               2. Enter the Surname: Tester
+               3. Enter the Email: Tester@gmail.com
+               4. Enter the Password: Tester234
+               5. Click button Submit
+Actual result: The Name field, takes a name with a period at the beginning and at the end.
+Expected result: The name field displays a validation message.
+Attachments: https://i.imgur.com/OOvFaCM.png
+             https://i.imgur.com/3LRVoXm.png
+==========================================================================
+Bug ID: 1.7
+Summary: The Name field, takes the name at the beginning of which there is the character.
+Severity: Minor
+Priority:
+Status: Open
+Pre-conditions:1. Open http://itcareer.pythonanywhere.com/
+Steps:         1. Enter the Name: #Nataliia
+               2. Enter the Surname: Tester
+               3. Enter the Email: Tester@gmail.com
+               4. Enter the Password: Tester234
+               5. Click button Submit
+Actual result: The Name field, takes the name at the beginning of which there is the character.
+Expected result: The name field displays a validation message.
+Attachments:  https://i.imgur.com/H2Bfy2C.png
+              https://i.imgur.com/3LRVoXm.png
+=========================================================================
+Bug ID: 1.8
+Summary: The Name field, can accept spaces.
+Severity: Minor
+Priority:
+Status: Open
+Pre-conditions:1. Open http://itcareer.pythonanywhere.com/
+Steps:         1. Enter the Name: take only spaces
+               2. Enter the Surname: Tester
+               3. Enter the Email: Tester@gmail.com
+               4. Enter the Password: Tester34
+               5. Click button Submit
+Actual result: The field name accept spaces
+Expected result: The name field displays a validation message.
+Attachments:  https://i.imgur.com/NBdjoTU.png
+              https://i.imgur.com/3LRVoXm.png
+=========================================================================
+Bug ID: 1.9
+Summary: The Name field, can accept characters.
+Severity: Minor
+Priority:
+Status: Open
+Pre-conditions:1. Open http://itcareer.pythonanywhere.com/
+Steps:         1. Enter the Name: $%$%$/*^&
+               2. Enter the Surname: Tester
+               3. Enter the Email: Tester@gmail.com
+               4. Enter the Password: Tester4
+               5. Click button Submit
+Actual result: The field name accept characters
+Expected result: The name field displays a validation message.
+Attachments:  https://i.imgur.com/iFJA37m.png
+              https://i.imgur.com/3LRVoXm.png
+=========================================================================
+Bug ID: 1.10
+Summary: The Name field, can accept digits.
+Severity: Minor
+Priority:
+Status: Open
+Pre-conditions:1. Open http://itcareer.pythonanywhere.com/
+Steps:         1. Enter the Name: 123456789
+               2. Enter the Surname: Tester
+               3. Enter the Email: Tester@gmail.com
+               4. Enter the Password: Tester4
+               5. Click button Submit
+Actual result: The field name accept digits.
+Expected result: The name field displays a validation message.
+Attachments:  https://i.imgur.com/GUejuua.png
+              https://i.imgur.com/3LRVoXm.png
+==========================================================================
+Bug ID: 1.11
+Summary: The Name field, can accept the name on the cyrillic.
+Severity: Minor
+Priority:
+Status: Open
+Pre-conditions:1. Open http://itcareer.pythonanywhere.com/
+Steps:         1. Enter the Name: Наталии
+               2. Enter the Surname: Tester
+               3. Enter the Email: Tester@gmail.com
+               4. Enter the Password: Tester45
+               5. Click button Submit
+Actual result: The field name accept the name on the cyrillic.
+Expected result: The name field displays a validation message.
+Attachments: https://i.imgur.com/jiIixFi.png
+             https://i.imgur.com/3LRVoXm.png
+==========================================================================
+Bug ID: 1.12
+Summary: The validation message is not displayed in the surname field if enter 1 character.
+Severity: Minor
+Priority:
+Status: Open
+Pre-conditions:1. Open http://itcareer.pythonanywhere.com/
+Steps:         1. Enter the Name: Tester
+               2. Enter the Surname: T
+               3. Enter the Email: Tester@gmail.com
+               4. Enter the Password: Tester56
+               5. Click button Submit
+Actual result: The field surname accept the surname with 1 character.
+Expected result: The name field displays a validation message.
+Attachments: https://i.imgur.com/pnwIEqX.png
+             https://i.imgur.com/3LRVoXm.png
+==========================================================================
+Bug ID: 1.13
+Summary:The Surname field accepts values that exceeds the specified maximum length.
+Severity: Minor
+Priority:
+Status: Open
+Pre-conditions:1. Open http://itcareer.pythonanywhere.com/
+Steps:         1. Enter the Name: NataliiaNataliiaNataliiaNataliiaNata
+               liiaNataliiaNataliiaNataliiaNataliiaNataliiaNataliiaNat
+               aliiaNataliiaNataliiaNataliiaNataliiaNataliiaNataliiaNa
+               taliiaNataliiaNataliiaNataliiaNataliiaNataliiaNataliiaN
+               ataliiaNataliiaNataliiaNataliiaNataliiaNataliialiiaNata
+               liiaaliia
+               2. Enter the Surname: Tester
+               3. Enter the Email: Tester@gmail.com
+               4. Enter the Password: Tester12
+               5. Click button Submit
+Actual result: The name field accepts the not valid accepts maximum 257 characters.
+Expected result: The name field don't accept the not valid accept maximum 257 characters.
+Attachments: https://i.imgur.com/9RAwr38.png
+             https://i.imgur.com/Bn3nqrF.png
+=============================================================================
+Bug ID: 1.14
+Summary: The Surname field, takes the surname at the beginning of which there is a digits.
+Severity: Minor
+Priority:
+Status: Open
+Pre-conditions:1. Open http://itcareer.pythonanywhere.com/
+Steps:         1. Enter the Name: Nataliia
+               2. Enter the Surname: 1Tester
+               3. Enter the Email: Tester@gmail.com
+               4. Enter the Password: Tester1234
+               5. Click button Submit
+Actual result: The Surname field, takes a surname at the beginning of which there is a digits
+Expected result: The Surname field displays a validation message.
+Attachments: https://i.imgur.com/oZg1f3I.png
+             https://i.imgur.com/WKQpeX7.png
+=============================================================================
+Bug ID: 1.15
+Summary: The Surname field, takes the surname with a period at the beginning and at the end.
+Severity: Minor
+Priority:
+Status: Open
+Pre-conditions:1. Open http://itcareer.pythonanywhere.com/
+Steps:         1. Enter the Name: Nataliia
+               2. Enter the Surname: .Tester.
+               3. Enter the Email: Tester@gmail.com
+               4. Enter the Password: Tester234
+               5. Click button Submit
+Actual result: The surname field, takes a surname with a period at the beginning and at the end.
+Expected result: The surname field displays a validation message.
+Attachments: https://i.imgur.com/nlFe6hX.png
+             https://i.imgur.com/u5zgn3Y.png
+=============================================================================
+Bug ID: 1.16
+Summary: The Surname field, takes the surname at the beginning of which there is the character.
+Severity: Minor
+Priority:
+Status: Open
+Pre-conditions:1. Open http://itcareer.pythonanywhere.com/
+Steps:         1. Enter the Name: Nataliia
+               2. Enter the Surname: #Tester
+               3. Enter the Email: Tester@gmail.com
+               4. Enter the Password: Tester234
+               5. Click button Submit
+Actual result: The Surname field, takes the surname at the beginning of which there is the character.
+Expected result: The Surname field displays a validation message.
+Attachments:  https://i.imgur.com/YHUF1O5.png
+              https://i.imgur.com/nadhBHX.png
+=============================================================================
+Bug ID: 1.17
+Summary: The Surname field, can accept characters.
+Severity: Minor
+Priority:
+Status: Open
+Pre-conditions:1. Open http://itcareer.pythonanywhere.com/
+Steps:         1. Enter the Name: Tester
+               2. Enter the Surname: $%$%$/*^&
+               3. Enter the Email: Tester@gmail.com
+               4. Enter the Password: Tester4
+               5. Click button Submit
+Actual result: The Surname field accept characters
+Expected result: The Surname field displays a validation message.
+Attachments:  https://i.imgur.com/VTMCbga.png
+              https://i.imgur.com/I6Rlv3s.png
+============================================================================
+Bug ID: 1.18
+Summary: The Surname field, can accept digits.
+Severity: Minor
+Priority:
+Status: Open
+Pre-conditions:1. Open http://itcareer.pythonanywhere.com/
+Steps:         1. Enter the Name: Tester
+               2. Enter the Surname: 123456789
+               3. Enter the Email: Tester@gmail.com
+               4. Enter the Password: Tester4
+               5. Click button Submit
+Actual result: The Surname field accept digits.
+Expected result: The Surname field displays a validation message.
+Attachments:  https://i.imgur.com/46IaIE3.png
+              https://i.imgur.com/TKnkm2p.png
+============================================================================
+Bug ID: 1.19
+Summary: The Surname field, can accept the surname on the cyrillic.
+Severity: Minor
+Priority:
+Status: Open
+Pre-conditions:1. Open http://itcareer.pythonanywhere.com/
+Steps:         1. Enter the Name: Tester
+               2. Enter the Surname: Тестер
+               3. Enter the Email: Tester@gmail.com
+               4. Enter the Password: Tester45
+               5. Click button Submit
+Actual result: The Surname field accept the surname on the cyrillic.
+Expected result: The Surname field displays a validation message.
+Attachments: https://i.imgur.com/Kin4N5V.png
+             https://i.imgur.com/8Rk1iVz.png
+===========================================================================
+Bug ID: 1.20
+Summary: The Surname field, can accept <script>.
+Severity: Critical
+Priority:
+Status: Open
+Pre-conditions:1. Open http://itcareer.pythonanywhere.com/
+Steps:         1. Enter the Name: Tester
+               2. Enter the Surname: <script>alert(123)</skript> 
+               3. Enter the Email: Tester@gmail.com
+               4. Enter the Password: Tester45
+               5. Click button Submit
+Actual result: The Surname field, can accept <script>alert(123)</skript> 
+Expected result: The Surname field displays a validation message.
+Attachments: https://i.imgur.com/pRUYcB2.png
+             https://i.imgur.com/wjbieku.png
+==========================================================================
+
+
+
+             
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

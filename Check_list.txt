@@ -1,0 +1,167 @@
+Задача:
+Написать список баг репортов и список тест кейсов(можно в виде чек листа).
+Этот список выгрузить на gitHub текстовым файлом.
+
+=======Требования=========
+==Обязательные поля: 
+Name 
+Email
+Password
+==Поле Name принимает:
+Латинские буквы
+Цифры
+Спец.символы: "-","_" "пробел"
+Макс количество: 256
+Миним количество: 2
+Регистр любой
+Первой должна быть буква (цифры и символы первыми нельзя)
+Последняя не имеет значения
+Если поле оставить пустым должно обвестись в красную рамочку и вывести сообщение: "This field is required".
+==Поле Surname: анологично Name
+==Поле Email
+стандарты
+==Поле Password:
+Макс количество: 16 символов
+Миним количество: 5 символов
+Буквы только латинские
+Минимально должнен включать: 1 заглавную букву, 1 строчную, 1 цифру. Спец символы не принимает.
+
+Должно быть поле на подтверждение пароля
+
+============CHECK LIST==========================================================================================================================|
+-№---------------CHECKS----------------------------------------------------------ENVIRONMENT---------------------BUGS ID-----------BUGS STATUS--|
+                                                                       |Chrome 90.0.4430.212, (64 бит) |                                        |
+************Name field**************************************************************************************************************************|
+1.Сheck required fields "*"                                                        FAIL                            1.1                 Open
++++++++Positive testing+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2.Сheck the validation message for the field                                       FAIL                            1.2                 Open
+3.Enter the name latin characters: Nataliia                                        PASS                      
+4.Enter the name with digits: Nataliia0410                                         PASS 
+5.Enter the name with dash: Nataliia-Victoriia                                     PASS
+6.Enter the name with underscores: Nataliia_Nata                                   PASS
+7.Enter the name with spaces: Nataliia Nata                                        PASS
+8.Enter the name consisting of 256 characters:                                     FAIL                            1.3                 Open        
+ NataliiaNataliiaNataliiaNataliiaNataliiaNataliiaNataliiaNata
+ liiaNataliiaNataliiaNataliiaNataliiaNataliiaNataliiaNataliiaN
+ ataliiaNataliiaNataliiaNataliiaNataliiaNataliiaNataliiaNatalii
+ aNataliiaNataliiaNataliiaNataliiaNataliiaNataliiaNataliiaNatal                    
+ iialiiaNataliiaaliia
+9.Enter the name consisting of 2 characters: Na                                    FAIL                            1.4                 Open             
+10.Enter the name in uppercase: NATALIIA                                            PASS
+11.Enter the name to a lowercase: nataliia                                          PASS
+12.Enter the name using CTRL+C, CTRL+V.                                            PASS
++++++++Negative testing+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+13. Leave the field blank: empty                                                   PASS
+14. Enter the name consisting of 1 characters: N                                   PASS
+15. Enter the name consisting of 257 characters:                                   PASS          
+ NataliiaNataliiaNataliiaNataliiaNataliiaNataliiaNataliiaNata
+ liiaNataliiaNataliiaNataliiaNataliiaNataliiaNataliiaNataliiaN
+ ataliiaNataliiaNataliiaNataliiaNataliiaNataliiaNataliiaNatalii
+ aNataliiaNataliiaNataliiaNataliiaNataliiaNataliiaNataliiaNatal
+ iialiiaNataliiaaliiak
+16. Enter the name at the beginning of which there is a digits:                    FAIL                            1.5                 Open     
+ 1Nataliia
+17.Enter the name with a period at the beginning and at the end:                   FAIL                            1.6                 Open
+ .Nataliia.
+18.Enter the name at the beginning of which there is the character:                FAIL                            1.7                 Open
+ #Nataliia
+19. Enter only spaces:                                                             FAIL                            1.8                 Open
+20. Enter only characters: #$#$#$#                                                 FAIL                            1.9                 Open
+21. Enter only digits: 123456789                                                   FAIL                            1.10                Open
+22. Enter the name on the cyrillic: Наталии                                        FAIL                            1.11                Open
+23. Enter the name using skript: <script>alert(123)</skript>                       PASS 
+*********Surname field***********************************************************************************************************************
++++++++Positive testing++++++++++++++++++++++++++++++++++++++++++++++++++++++
+24.Enter the surname latin characters: Makarchuk                                   PASS                 
+25.Enter the surname with digits: Makarchuk0410                                    PASS 
+26.Enter the surname with dash: Makarchuk-Klochko                                  PASS
+27.Enter the surname with underscores: Makarchuk_Klochko                           PASS
+28.Enter the surname with spaces: Makarchuk Klochko                                PASS
+29.Enter the surname consisting of 256 characters:                                 PASS
+ MakarchukMakarchukMakarchukMakarchukMakarchukMakarchukMakar
+ chukMakarchukMakarchukMakarchukMakarchukMakarchukMakarchukM
+ akarchukMakarchukMakarchukMakarchukMakarchukMakarchukMakarc
+ hukMakarchukMakarchukMakarchukMakarchukMakarchukMakarchukMa
+ karchukMakarchukMahh
+30.Enter the surname consisting of 2 characters: Ma                                PASS
+31.Enter the surname in uppercase: MAKARCHUK                                       PASS
+32.Enter the surname to a lower cascading: makarchuk                               PASS
+33.Enter the surname using CTRL+C, CTRL+V.                                         PASS
++++++++Negative testing+++++++++++++++++++++++++++++++++++++++++++++++++++++
+34. Leave the field blank: empty                                                   PASS                                   
+35. Enter the surname consisting of 1 characters: M                                FAIL                            1.12                Open
+36. Enter the surname consisting of 257 characters:                                FAIL                            1.13                Open
+ MakarchukMakarchukMakarchukMakarchukMakarchukMakarchukMakar
+ chukMakarchukMakarchukMakarchukMakarchukMakarchukMakarchukM
+ akarchukMakarchukMakarchukMakarchukMakarchukMakarchukMakarc
+ hukMakarchukMakarchukMakarchukMakarchukMakarchukMakarchukMa
+ karchukMakarchukMahhh
+37.Enter the surname at the beginning of which there is a digits:                  FAIL                            1.14                Open
+ 1Tester
+38.Enter the surname with a period at the beginning and at the end:                FAIL                            1.15                Open  
+ .Tester.
+39.Enter the surname at the beginning of which there is the character:             FAIL                            1.16                Open
+ #Tester
+40. Enter only spaces:                                                             PASS                                            
+41. Enter only characters: #$#$#$#                                                 FAIL                            1.17                Open
+42. Enter only digits: 123456789                                                   FAIL                            1.18                Open   
+43. Enter the surname on the cyrillic: Тестер                                      FAIL                            1.19                Open
+44. Enter the surname using skript: <script>alert(123)</skript>                    FAIL                            1.20                Open
+*************Email field***********************************************************************************************************************
++++++++Positive testing+++++++++++++++++++++++++++++++++++++++++++++++++++++
+45. Сheck the validation message for the field                                     FAIL
+46. Enter an email in latin in lowercase: tester@gmail.com                         PASS
+47. Enter an email in latin in uppercase:  Tester@gmail.com                        PASS
+48. Enter an email with digits in the local part:                                  PASS
+    tester123@gmail.com                             
+49. Enter an email with dash in the local part:                                    PASS
+    tester-tester@gmail.com
+50. Enter an email with the dot in the local part:                                 PASS
+    tester.tester@gmail.com
+51. Enter an email with underscores: tester_tester@gmail.com                       PASS
+52. Enter an email with dash in the domain part: test@g-mail.com                   PASS
+53. Enter an email using CTRL+C, CTRL+V.                                           PASS
++++++++Negative testing+++++++++++++++++++++++++++++++++++++++++++++++++++++
+54. Enter an email without the dot in the domain part: tester@gmailcom             FAIL
+55. Enter an email with cyrillic in the domain part: tester@дот.ком                FAIL
+56. Enter an email that starts and ends with dot in the local part:                FAIL
+    .tester.@gmail.com     
+57. Enter an email in uppercase all letter for local part: TESTER@gmail.com        FAIL
+58. Enter an email in uppercase all letter for domen part: tester@GMAIL.COM        FAIL
+59. Enter an email with cyrillic in the local part: тестер@gmail.com               FAIL
+60. Enter an email with digits in the local part: 123456@gmail.com                 FAIL
+61. Enter an email with digits in the domain part: tester@123456                   FAIL
+62. Enter an email without "@" : testergmail.com                                   FAIL
+63. Enter an email with two "@" : tester@@gmail.com                                FAIL
+64. Enter to an email only spaces:                                                 FAIL
+65. Leave the field blank: empty                                                   FAIL
+66. Enter the email using skript: <script>alert(123)</skript>                      FAIL
+**********Password field************************************************************************************************************************
++++++++Positive testing+++++++++++++++++++++++++++++++++++++++++++++++++++++
+67. Сheck the validation message for the field                                     FAIL
+68. Enter the password latin characters with digit and the capital letter:         PASS
+    Tester1                       
+69. Enter the password consisting of 5 characters (3 letter and 2 digits):         PASS
+    Tes12
+70. Enter the password consisting of 16 characters (14 letter and 2 digits):       PASS
+    Testtesttestte12
+71. Enter the password using CTRL+C, CTRL+V.                                       PASS
++++++++Negative testing+++++++++++++++++++++++++++++++++++++++++++++++++++++
+72. Enter the password with dash: Tester-Tester12                                  FAIL
+73. Enter the password with underscores: Tester_Tester12                           FAIL
+74. Enter the password with spaces: Tester Tester                                  FAIL
+75. Enter the password consisting of 4 characters (2 letter and 2 digits):         FAIL
+    Te12
+76. Enter the password consisting of 17 characters (15 letter and 2 digits):       FAIL
+    Testtesttesttes12
+77. Enter only spaces:                                                             FAIL
+78. Leave the field blank: empty                                                   FAIL
+79. Enter the password using skript: <script>alert(123)</skript>                   FAIL
+80. Enter the password only letters in uppercase: TESTER                           FAIL
+81. Enter the password only letters to a lowercase: tester                         FAIL
+82. Enter the password using letters to a lowercase with digits: tester12          FAIL
+83. Enter the password using letters in uppercase with digits: TESTER12            FAIL
+84. Enter the password using only characters: /*/*/*/*/*                           FAIL
+85. Enter the password using only letters: Tester                                  FAIL
+86. Enter the password using only digits: 123456                                   FAIL
+
